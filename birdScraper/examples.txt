@@ -1,0 +1,364 @@
+################################## example output 1: 
+
+1. ❓ Did you know anon?
+
+Adding the "payable" keyword to your contract constructor can save you some gas!
+
+However...
+
+❗️ It's not recommended to do this, but it's good to understand why adding that keyword would save gas. 🧵
+
+2. When you create a contract, you often don't want it to start "funded" with ETH. We don't want to accidentally send it ETH that we can't recover!
+
+3. So Solidity has a built-in check to make sure you didn't send any. If you add the "payable" keyword, it removes that check! And remember, any additional work you ask your code to do, means it costs more work.
+
+Not checking for sent ETH, is less work for your code to do!
+
+4. Doing this check costs a little extra gas, but makes deploying your contract a little more idiot-proof. 
+
+Solidity as a language has a number of built-in checks (including safemath!) to make sure you don't accidentally do something wrong.
+
+################################## example output 2:
+
+1. Black Scholes Merton Model is one of the most popular pricing models for option contracts.
+
+But is it really suitable to price on-chain or DeFi options?
+
+I along with @0xbeamish spent a couple of months researching the compatibility of BSMM with DeFi 👇
+
+https://t.co/oXMHyHReZU
+
+2. Also, here's the 2nd part of our research.
+
+Now, read along to get some useful insights on this model and its compatibility with blockchain infrastructure 🧵👇
+
+https://t.co/Gynb3gJMCH
+
+3. Black–Scholes formula theoretically estimates the price of European-style options on a stock/asset that (during the lifetime of the option) -
+
+-doesn’t pay any dividends
+-has a constant level of volatility
+- has risk premium normally distributed (inputs are assumed log-normally)
+
+4. "It is built on the idea of portfolio replication, where the price of a derivative should be equivalent to the cost of replicating a portfolio that, over the lifetime of the derivative contract, provides identical cash flows." - @nope_its_lily's article on DeFi options
+
+5. We found that certain assumptions of this model don't fit well when it comes to blockchain infrastructure (covered in detail in part-1). https://t.co/W8luJv5BYn
+
+6. In crypto 
+
+- assets due to excess kurtosis, and skew, don't exhibit Gaussian distribution
+
+-volatility doesn't remain constant during the lifetime of the option.
+
+-crypto is full of arb opportunities.
+
+-the concept of risk-free interest rate (RFIR) isn't really mature.
+
+..so on
+
+7. We then also go on to assess the impact of certain implied volatility (IV) fractals like volatility smiles and skews on options pricing.
+
+8. When clubbed with certain characteristics of blockchain like 'oracle latency' - these fractals can be pretty harmful to liquidity providers/option writers when using BSMM as a 'base model'.
+
+9. In part - 2 of this research, we try to assess the DeFi protocols which use BSMM with certain adjustments to price the option positions.
+
+10. Through innovative approaches, these protocols (@lyrafinance @dopex_io @ryskfinance @PremiaFinance @sirenprotocol) have done a pretty good job in pricing options using BSMM as a base model.
+
+But still, there's a long way till we achieve the max accuracy in pricing DeFi options
+
+11. We have put months of effort in this research, and I think you wouldn't regret putting 30 mins of our time reading this.
+
+12. In the end, we would like to thank our DeFi team at @0xPolygon, as well as the teams of Rysk, Lyra, Dopex, Siren, and Premia to help us understand the intricacies of this complex model.
+
+Also @ThogardPvP for his advice on certain aspects of this research.
+
+Thanks!
+
+13. @sandeepnailwal @ArjunKalsy @jdkanani @NarbTrading @sourcex44 @_khanhamzah @amitchax @chainyoda @0xkhan_ @YJN58
+
+################################## example output 3: 
+
+1. Hello world :)
+
+The mev-boost landing page goes live today! It provides a one stop shop for everything you need to know about mev-boost.
+
+https://t.co/3oZHLc9qqp https://t.co/F4hCo9wfk7
+
+2. While mev-boost has has implications across the transaction lifecycle. At the moment, we are focusing support for node operators in order to achieve a successful merge.
+
+Over time, we will release more content for dapp developers and others! https://t.co/TiLVF1S0nI
+
+3. A big shout-out to all the Ethereum core devs and researchers for working with us over the last year to make sure we provide an MEV solution that is compatible with solo stakers and protects client diversity. https://t.co/kK6fCEv6kB
+
+4. Now that we have a few consensus clients ready, we’ve released a call for testing for node operators and are monitoring for successful mev-boost block production on each testnet.
+
+Check in with your node operators and ask if they've completed their mev-boost integration! https://t.co/rbgHZUTjhl
+
+5. The final testnet merge for Goerli is fast approaching and provides the final opportunity for node operators to perform a full dry run of the merge.
+
+No time for node operators to snooze⏰
+
+https://t.co/xYIFasIZ0C
+
+6. In order to keep up with project progress and get involved, check out @metachris regular development updates https://t.co/7l5F0wbNQr
+
+7. We’ve received tons of engagement from the community and created a FAQ for each stakeholder group https://t.co/EmXcKtB2Fs
+
+8. MEV-Boost has grown to be a wonderful community project with a broad contribution base. We are issuing poaps for everyone to show off their contributions :)
+If you are a contributor, thank you and stay tuned! https://t.co/dxEPFm3xic
+
+9. A special shout-out to @lekevicius for stepping up and designing an awesome logo for the project! https://t.co/G82AoZ6F01
+
+10. Oh.. We also have a mev-boost avatar, courtesy of DALL-E and @VirtualElena 😄 https://t.co/Cs5stBVl9P
+
+11. Thank you to the ETH2 flashbots working group members for their continued support! 
+@Teku_ConsenSys
+@coinbase
+@Figment_io
+@BitcoinSuisseAG
+@blocknative
+@ObolNetwork
+@rockx_official
+@Rocket_Pool
+@stakefish
+@ethstatus
+@Kiln_finance
+@bloXrouteLabs
+@ChorusOne
+@StakingFac
+@LidoFinance
+
+12. @ethermine_org
+@BlockdaemonHQ
+@P2Pvalidator
+@FoundryServices
+@ankr
+@staked_us
+@AlchemyPlatform
+@ethStaker
+@FoundryServices
+@prylabs
+@staked_us
+@ConsenSys
+@BisonTrails
+
+################################## example output 4: 
+
+1. Amidst the drama around Celsius, 3AC, Solend and a massive market drawdown, one of the strangest Solana MEV instances went fairly unnoticed
+
+One token swap led to a cascade of arbs &amp; liquidations that netted MEV bots more than $2 Million...
+
+All within a span of 40 seconds 🧵 https://t.co/jl9PGn3Z8y
+
+2. There are 4 protagonists in this story:
+1️⃣ 7p..UU: the scnSOL whale (lost $700k)
+2️⃣ G6..AV: the SOL-scnSOL arb bot (profited $25k, but lost out on $530k)
+3️⃣ 44..Qu: the USDC-scnSOL arb bot (profited $400k, but lost out on $100k)
+4️⃣ Fx..mY: the scnSOL liquidator (profited $2M)
+
+3. And 4 primary MEV “arenas”:
+1️⃣ @SoceanFinance
+2️⃣ @orca_so
+3️⃣ @Saber_HQ
+4️⃣ @solendprotocol
+
+4. The story begins with our whale 7pX...s5UU who accumulated over 20,000 scnSOL late 2021.
+
+This in itself is not too out of the ordinary given Socean is a liquid staking provider like Marinade and Lido and allows SOL holders to easily stake SOL. https://t.co/okBpWgwwE8
+
+5. All looks normal until one day our anonymous whale here decides to dump their 20k scnSOL...
+
+So, how does 7pX decide to get rid of his scnSOL stake?
+
+On June 14 (at 23:30:16 PST), the whale swaps 20k scnSOL to SOL via Orca’s scnSOL-SOL v2 liquidity pool. 
+
+https://t.co/Cnk4UdoYfk
+
+6. The problem?
+
+This pool has almost no liquidity (for reference, it currently sits at less than $10k in deposits). 
+
+So, the whale ends up swapping his 20k scnSOL for… 200 SOL 😳 https://t.co/fXB33rki63
+
+7. Did 7px have alternatives?
+
+Absolutely. Unstaking via @SoceanFinance could yield 100x more SOL.
+
+While it's unclear why 7px decided to take such a hit (ignorance? deliberate dump?), it's evident that this is the root cause of the cascade about to follow.
+
+https://t.co/Pv3roiOVFd
+
+8. The 20k scnSOL dump into @orca_so’s pool naturally puts the price of scnSOL completely out of whack. 
+
+What ensues is a race among bots to arbitrage this juicy pool 🏎🏎
+
+9. Six seconds later (at 23:30:22), G6E..hAV swaps 1562 USDC for 56.17 SOL.
+
+In the same transaction, the bot subsequently trades the 56 SOL for a whopping 19,860 scnSOL 🤯 via the scnSOL-SOL pool that the whale messed up. https://t.co/2YUwCTiCUF
+
+10. Ideally, the bot would’ve stopped here. 
+
+But to make sure that it ends up with more USDC than it started with, the bot then swaps the 19,860 scnSOL for 26,724 USDC (effectively, selling each scnSOL for 1.34 USD). 
+
+For reference, SOL was trading around 28 USD at that time. https://t.co/tH9FTueifn
+
+11. So, G6E nets $25k via this one transaction but missed out on around $530k. 
+
+The last swap from scnSOL to USDC occurred via Orca’s scnSOL-USDC pool.
+
+12. As indicated by the price per scnSOL in the TX, this swap messes up Orca's scnSOL-USDC pool/price similar to what 7px did to the scnSOL-SOL pool. 
+
+https://t.co/iW0t3p3Q9q
+
+13. This presents yet another opportunity for arb bots.
+
+Since now the scnSOL-USDC pool is out of order, bot 44P…yQu comes in and first trades 172 SOL for 4769 USDC (at 23:30:26).
+
+It then uses the Orca pool to swap the 4769 USDC for 16357 scnSOL (hence, paying $0.29 per scnSOL). https://t.co/M9791gl4aW
+
+14. Yet, just like the last bot, it needs to convert these scnSOL back to its initial token.
+
+So, the last instruction is a swap of the 16357 scnSOL to 12946 SOL via Saber’s scnSOL-SOL pool.
+
+While this bot made 12774 SOL/$400k, it missed out on at least another 3411 SOL (~$100k). https://t.co/EOLF0do1Wi
+
+15. Although @Saber_HQ’s stable swap program usually trades pairs at a fairly stable ratio (usually ~1/1), due to missing liquidity in the scnSOL-SOL pool, the exchange rate dropped to around 0.79 (scnSOL/SOL). 
+
+https://t.co/TeBemA4IbR
+
+16. Though 44P is not the only bot that arbs back the scnSOL-USDC pool.
+
+For example, ecE…Fdjc (at 23:30:31) is able to collect $46k by routing via crema’s scnSOL-mSOL pool.
+
+But in contrast to 44P, ecE doesn’t dramatically change the price of another liquidity pool. https://t.co/iwCtGAMefE
+
+17. To elaborate, the consequence of 44P's transaction is just like the previous two instances.
+
+A liquidity pool with a significant change in price, which does not trade at the global exchange rate (e.g. the rate quoted on other exchanges with deeper liquidity).
+
+[img creds: Curve] https://t.co/N322vBdsGX
+
+18. Naturally, some convenient arbitrage opportunities present themselves following the few seconds after this Saber swap.
+
+Ranging from a few cents to $8829 in profits per transaction, mainly spread across Aas…mDX (which made over $12k via multiple TXs) and a few other bots. https://t.co/OJd2qsFnSR
+
+19. Yet, the main spectacle that happens is not the arbitrages but rather a liquidation on Solend.
+
+@solendprotocol lets users mint collteralized versions of specific assets (cTokens).
+
+At one point, you were able to mint cscnSOL for scnSOL  - to borrow against on Solend.
+
+20. Like other lending protocols, Solend liquidates positions if they are deemed unhealthy and at a risk at becoming undercollateralized due to price movements of the collateral.
+
+To do this, Solend uses @PythNetwork and @switchboardxyz as price oracles.
+
+[img creds: Rick Delaney] https://t.co/ysUAT8SSfB
+
+21. For scnSOL in particular, Solend uses a Switchboard oracle that relies on the previously mentioned liquidity pools to determine the scnSOL price.
+
+https://t.co/joNoXz89R9
+
+22. So when those pools got dumped on, it was shortly reflected in the oracle price and made scnSOL collateral appear significantly cheaper than a few seconds prior. 
+
+This naturally led to some Solend positions becoming liquidatable. 
+
+The big prize? A liquidation worth ~$2 million. https://t.co/LyLhtqgetx
+
+23. What happens in the transaction is that the liquidator bot can repay the collateral (here 9989 SOL) and in exchange gets an equivalent amount of collateral + a 5% fee.
+
+24. Due to the skewed oracle price, when the bot liquidates the obligation, the amount the bot receives for 9,989 SOL is 59,404 scnSOL.
+
+https://t.co/IXmLKVzG4k
+
+25. The MEV searcher (who runs the bot) later transferred these 59,405 scnSOL to another wallet (from Fx59 to Ae9). 
+
+From there, it unstaked the 59,405 scnSOL via Socean, which were converted to 62,268 SOL. https://t.co/vXZhwbIMTg
+
+26. The unstaked SOL were finally transferred to FTX (6ZRCB7AAqGre6c72PRz3MHLC73VMYvJ8bi9KHf1HFpNk). 
+
+Hence, yielding a net profit of 52,311 SOL (in one TX!), which at current prices is a whopping $2,2 million. https://t.co/RH7Mlz5vV5
+
+27. In summary,
+1️⃣ Whale 7px dumps 20k scnSOL for 200 SOL via Orca’s scnSOL-SOL
+2️⃣ Bot G6E arbs back scnSOL-SOL but tanks Orca’s scnSOL-USDC
+3️⃣ Bot 44P arbs back scnSOL-USDC but tanks Saber’s scnSOL-SOL
+4️⃣ Bot Fx5 extracts 52k SOL via a Solend liquidation due to scnSOL price tanking https://t.co/Vjp3nPgIdN
+
+################################## example output 5: 
+
+1. In the race to revive ve(3,3) after @solidlyexchange's downfall, both @dystopiaswap and @VelodromeFi have attempted to perfect one of the most challenging dex incentive designs
+
+A race for TVL, longevity, and innovation . . . who will win? 🧵👇
+
+https://t.co/vXCEi8R627
+
+2. 1
+4 weeks ago, @Dystopiaswap went live and emissions began. @velodromefi followed suit just 2 weeks after. Since then, a mini narrative has spun up about the revival of ve(3,3)
+
+With all good narratives, battles begin
+
+First curve wars, then solidly wars, now ve(3,3)2.0 wars
+￼ https://t.co/nU3YSINXy6
+
+3. 2
+Velodrome absolutely pumped at the beginning, reaching highs of $50m TVL, only to follow with a down only trend. Dystopia, however, has been mostly stable 
+
+I found 3 design choices that caused this disparity:
+- Emissions Schedule 
+- The Benevolent Dictator
+- Yield Optimizers https://t.co/OVvmZsqdDG
+
+4. 3 Emissions Schedule 
+
+Velodrome opts for a fixed emissions schedule, beginning with 15m velo, which decays at a rate of 1% per week 
+
+Dystopia however has its emissions schedule as a function of the amount of $DYST staked
+
+ -&gt; more DYST staked = lower emissions -&gt; less dilution
+
+5. 4
+The dilution avoidance incentive creates a flywheel effect since DYST stakers also receive boosted rewards when LP’ing
+
+If already staking to avoid dilution, might as well LP for rewards
+
+Velodrome's fixed emissions schedule simply fails to create this flywheel
+
+6. 5
+Dystopia gave 55% of the initial DYST supply to the Polygon Ecosystem DAO as a veNFT (11% after 4 yrs of emissions)
+
+However the DAO must always act in the best interest of the project
+
+Velodrome airdropped 60% of the supply to OP ecosystem users and users of specific projects https://t.co/pKG2tLfv6A
+
+7. 6
+ I coined the DAO a “Benevolent Dictator” since they must: 
+- always drive emissions to the highest performing pools
+- use funds earned from the veNFT for grants to support the future growth of the Polygon DeFi ecosystem
+
+Lots of power. Yes. Tyrannical? No. https://t.co/bUoGkqFAMv
+
+8. 7 
+Having a benevolent dictator incentivizes users to deposit into high performing pools, knowing that they are guaranteed to receive large $DYST emissions. 
+
+Guaranteed security.
+
+9. 8
+For a similar size airdrop, the $VELO went to retail users, many of whom had no interest in the protocol. 
+
+Awesome to receive free money, but not the best allocation of resources if you want to create a community invested in the project
+
+10. 9 
+Lastly, Dystopia released alongside a yield aggregator @PenroseDeFi. 
+
+Essentially, Convex: Curve -&gt; Dystopia: Penrose
+
+
+This allows for liquid staked governance tokens and max boosts for retail users. Massive gains for users, and increased composability for the ecosystem.
+
+11. 10
+Velodrome chose another path, and its current design doesn’t offer yield optimizers, though it may change in the future
+
+12. 11
+I’m not naive enough to think that TVL is all that matters. The true judgement can happen in 6 to 12 months when we see the innovations that have raised from each dex.
+
+
